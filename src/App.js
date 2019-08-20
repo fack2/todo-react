@@ -1,13 +1,37 @@
-import React, { Components } from "react"
-import AddToDo from "./Components/AddToDo"
-import ToDoList from "./Components/ToDoList"
-import "./App.css"
+import React, { Component } from "react"
+import AddToDo from "./Component/AddToDo"
+import ToDoList from "./Component/ToDoList"
 
-class App extends React.Component {
+class App extends Component {
+
+  state = {
+    items: [],
+    CurrentTask: {
+      text: '',
+      btn: ''
+
+    }
+  }
+
+  addItem = ele => {
+    ele.preventDefault()
+    const newItem = this.state.CurrentTask
+
+    if (newItem.text !== '') {
+      const items = [...this.state.items, newItem]
+      this.setState({
+        items: items,
+        CurrentTask: { ...this.state.CurrentTask, text: '' },
+      })
+    }
+  }
+
+
   render() {
     return (
       <div>
-        <p>hello</p>
+        <ToDoList addItem={this.addItem} />
+        <AddToDo addItem={this.addItem} currentText={this.state.CurrentTask.text} />
       </div>
     )
   }
