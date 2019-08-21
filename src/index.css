@@ -1,13 +1,64 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+img{
+  width: 100%;
+}
+
+.input-div{
+display: flex;
+justify-content: center;
+align-items: center;
+padding-bottom: 7%;
+}
+
+
+h1{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-align: center;
+    padding-top: 9%;
+    padding-bottom: 9%;
+     
+
+}
+
+input{
+  border: 1px solid rgb(230, 64, 14);
+	margin: 0 0 5px;
+  padding: 10px;
+  width: 67%;
+}
+
+.btnAdd{
+	border: none;
+	background: rgb(230, 64, 14);
+	color: #fff;
+	margin: 0 0 5px;
+	padding: 10px;
+	font-size: 15px;
+}
+
+
+.btnDel{
+    width: 35px;
+    height: 35px;
+    background:rgb(230, 64, 14);
+    font-size: 18px;
+    margin-right: 8%;
+}
+
+li{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+
+p {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 27px;
+  padding-left: 9%;
 }
