@@ -18,9 +18,11 @@ To Do App, for the ReactJs week.
  - package.json
  
  ## How to run project?
+ 
    - **git clone** this repo.
    - **npm i**.
    - **npm start**.
+ 
    
  ## Team members
    - [Duaa](https://github.com/DuaaH)
