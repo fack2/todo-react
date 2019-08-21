@@ -24,6 +24,10 @@ To Do App, for the ReactJs week.
    - **npm i**.
    - **npm start**.
  
+ ## Prototype
+ 
+<img src='https://user-images.githubusercontent.com/45401690/63419148-f0327100-c40c-11e9-9ec7-b37ae658ac46.png' height="300" width="350">
+
    
  ## Team members
    - [Duaa](https://github.com/DuaaH)
