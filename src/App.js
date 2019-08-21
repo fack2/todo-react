@@ -1,40 +1,45 @@
-import React, { Component } from "react"
-import AddToDo from "./Component/AddToDo"
-import ToDoList from "./Component/ToDoList"
+import React, { Component } from 'react';
+import AddToDo from './Component/AddToDo'
 
 class App extends Component {
-
   state = {
-    items: [],
-    CurrentTask: {
-      text: '',
-      btn: ''
-
-    }
+    list: [{ 'todo': 'plan for the project' },
+    { 'todo': 'write issues' }],
+    todo: ''
   }
 
-  addItem = ele => {
-    ele.preventDefault()
-    const newItem = this.state.CurrentTask
 
-    if (newItem.text !== '') {
-      const items = [...this.state.items, newItem]
-      this.setState({
-        items: items,
-        CurrentTask: { ...this.state.CurrentTask, text: '' },
-      })
-    }
+  AddItem = (event) => {
+    event.preventDefault()
+    this.setState(({ list, todo }) => ({
+      list: [...list, { todo }],
+      todo: ''
+    }))
+  }
+
+  handleChange = event => {
+    this.setState({ todo: event.target.value })
   }
 
 
   render() {
     return (
       <div>
-        <ToDoList addItem={this.addItem} />
-        <AddToDo addItem={this.addItem} currentText={this.state.CurrentTask.text} />
+        <form>
+
+          <input type="text" value={this.state.todo} onChange={this.handleChange} placeholder='add your task ...!!!'></input>
+          <button onClick={(e) => this.AddItem(e)}>ADD</button>
+        </form>
+        <div>
+          {this.state.list.map((task, key) => {
+            return (<AddToDo key={key}
+              task={task.todo} />)
+          })}
+        </div>
+
       </div>
     )
   }
 }
 
-export default App
+export default App;

@@ -1,17 +1,18 @@
-import React, { Component } from "react"
+import React, { Component } from 'react';
 
 
 class AddToDo extends Component {
 
-
     render() {
-        console.log(this.props);
-
         return (
-            <div>  </div>
+            <div>
+                <p>{this.props.task}</p>
+                <button>Delete</button>
+            </div>
         )
     }
 }
 
 
-export default AddToDo
+
+export default AddToDo;
