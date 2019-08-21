@@ -9,10 +9,11 @@ To Do App, for the ReactJs week.
  - public
    - index.html
  - src
-   - component
+   - Component
      - ItemList.js
    - App.js
    - index.js
+   - index.css
  - README.md
  - .gitignore
  - package.json
