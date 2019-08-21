@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import ItemList from "./Component/ItemList"
-import './index.css';
+import './style.css';
 
 
 class App extends Component {
@@ -32,14 +32,14 @@ class App extends Component {
     return (
       <div>
         <h1>To Do App</h1>
-        <form className="input-div">
+        <form className="taskForm">
           <input className="box-input"
             type="text"
             value={this.state.todo}
             onChange={this.handleChange}
             placeholder="Add Task..."
           />
-          <button className="btnAdd" onClick={this.AddItem}>ADD</button>
+          <button className="addBtn" onClick={this.AddItem}>ADD</button>
         </form>
         <div>
           {this.state.list.map((task, key) => (

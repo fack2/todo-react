@@ -1,5 +1,5 @@
 import React from "react"
-import '../index.css'
+import '../style.css'
 
 const ItemList = ({ task, deleteItem, id }) => {
   return (
@@ -7,7 +7,7 @@ const ItemList = ({ task, deleteItem, id }) => {
       <ul>
 
         <li> <p>{task}</p>
-          <button className="btnDel" id={id} onClick={() => deleteItem(task)}> X </button>
+          <button className="deleteBtn" id={id} onClick={() => deleteItem(task)}> X </button>
         </li>
 
       </ul>
