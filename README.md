@@ -1,5 +1,5 @@
 # todo-react
-To Do web application, for the React week.
+To Do App, for the ReactJs week.
 
 ## User Journey
  - As a user I'm able to add task.
@@ -8,11 +8,9 @@ To Do web application, for the React week.
 ## File Structure
  - public
    - index.html
-   - style.css
  - src
-   - components
-     - AddTodoItem.js
-     - TodoList.js
+   - component
+     - ItemList.js
    - App.js
    - index.js
  - README.md
@@ -22,7 +20,7 @@ To Do web application, for the React week.
  ## How to run project?
    - **git clone** this repo.
    - **npm i**.
-   - **run start**.
+   - **npm start**.
    
  ## Team members
    - [Duaa](https://github.com/DuaaH)
