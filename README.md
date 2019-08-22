@@ -1,4 +1,4 @@
-# todo-react
+# todo-react :books: :pencil2:
 To Do App, for the ReactJs week.
 
 ## User Journey
