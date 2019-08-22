@@ -1,6 +1,7 @@
 import React, { Component } from "react"
-import ItemList from "./Component/ItemList"
-import './style.css';
+import ItemList from "./ItemList"
+import InputForm from './InputForm'
+import '../style.css';
 
 
 class App extends Component {
@@ -31,26 +32,19 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>To Do App</h1>
-        <form className="taskForm">
-          <input className="box-input"
-            type="text"
-            value={this.state.todo}
-            onChange={this.handleChange}
-            placeholder="Add Task..."
+        <InputForm
+          todo={this.state.todo}
+          AddItem={this.AddItem}
+          handleChange={this.handleChange} />
+
+        {this.state.list.map((task, key) => (
+          <ItemList
+            key={key}
+            id={key}
+            task={task.todo}
+            deleteItem={this.deleteItem}
           />
-          <button className="addBtn" onClick={this.AddItem}>ADD</button>
-        </form>
-        <div>
-          {this.state.list.map((task, key) => (
-            <ItemList
-              key={key}
-              id={key}
-              task={task.todo}
-              deleteItem={this.deleteItem}
-            />
-          ))}
-        </div>
+        ))}
       </div>
     )
   }
